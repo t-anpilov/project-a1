@@ -28,7 +28,7 @@ class EffectivePower {
 
 	result_moment(){
 		let res = document.createElement('p');
-		res.innerHTML = this._name + ' specific power is ' + Math.round(this._moment, this._rotation * 10000 / this._capacity)/10 + 'N*m/L';
+		res.innerHTML = this._name + ' specific moment is ' + Math.round(this._moment * 10000 / this._capacity)/10 + 'N*m/L';
 		document.body.appendChild(res);
 	}
 }
