@@ -25,6 +25,12 @@ class EffectivePower {
 		res.innerHTML = this._name + ' specific power is ' + Math.round((getPower(this._moment, this._rotation)) * 10000 / this._capacity)/10 + 'hp/L';
 		document.body.appendChild(res);
 	}
+
+	result_moment(){
+		let res = document.createElement('p');
+		res.innerHTML = this._name + ' specific power is ' + Math.round(this._moment, this._rotation * 10000 / this._capacity)/10 + 'N*m/L';
+		document.body.appendChild(res);
+	}
 }
 
 var audi = new EffectivePower('Audi A4 1.9 TDI', 1896, 310, 1900);
@@ -42,6 +48,7 @@ function addCar() {
 	let am = new EffectivePower(a, b, c, d);
 	am.result();
 	am.result2();
+	am.result_moment();
 }
 
 function comeOn(event) {
