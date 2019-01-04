@@ -30,6 +30,9 @@ class EffectivePower {
 		let res = document.createElement('p');
 		res.innerHTML = this._name + ' specific moment is ' + Math.round(this._moment * 10000 / this._capacity)/10 + 'N*m/L';
 		document.body.appendChild(res);
+		let empty = document.createElement('p');
+		empty.innerHTML  = '';
+		document.body.appendChild(empty);
 	}
 }
 
